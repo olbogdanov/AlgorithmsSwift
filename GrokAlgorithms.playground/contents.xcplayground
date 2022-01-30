@@ -3,12 +3,11 @@
     <pages>
         <page name='BinSearch'/>
         <page name='SelectionSort'/>
-        <page name='playgrround'/>
         <page name='sum'/>
         <page name='QSort'/>
         <page name='Dictionary'/>
         <page name='Breadth First Search'/>
         <page name='Dijkstra'/>
-        <page name='BookDijkstra'/>
+        <page name='SetCovering'/>
     </pages>
 </playground>

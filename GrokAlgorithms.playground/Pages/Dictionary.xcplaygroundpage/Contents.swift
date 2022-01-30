@@ -6,8 +6,6 @@ func checkVoter(_ name: String) -> String {
     if voted[name] == true {
         return "kick them out"
     } else {
-//        var combinedAttributes : NSMutableDictionary! =  NSMutableDictionary(dictionary: voted)
-//        combinedAttributes.addEntries(from: voted)
         voted[name] = true
         return "let them vote"
     }
