@@ -9,5 +9,8 @@
         <page name='Breadth First Search'/>
         <page name='Dijkstra'/>
         <page name='SetCovering'/>
+        <page name='Fibonacci'/>
+        <page name='FizzBuzz'/>
+        <page name='Knapsack'/>
     </pages>
 </playground>
