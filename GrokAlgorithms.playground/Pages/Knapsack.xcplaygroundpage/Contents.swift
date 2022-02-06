@@ -9,12 +9,10 @@ struct Item {
 let items = [Item(name: "television", weight: 1, value: 500),
              Item(name: "candlesticks", weight: 1, value: 300),
              Item(name: "stereo", weight: 5, value: 400),
-             Item(name: "laptop", weight: 7, value: 1000),
+             Item(name: "laptop", weight: 7, value: 10000),
 ]
 
-
-
-func optimalItems(items: [Item], maxCapacity: Int) {
+func knapsack(items: [Item], maxCapacity: Int) {
     var grid = [[Int]](
         repeating: [Int](repeating: 0, count: maxCapacity+1),
         count: items.count+1)
@@ -36,7 +34,7 @@ func optimalItems(items: [Item], maxCapacity: Int) {
             }
         }
     }
-
+    
     // figure out solution from table
     var solution: [Item] = [Item]()
     var capacity = maxCapacity
@@ -51,4 +49,23 @@ func optimalItems(items: [Item], maxCapacity: Int) {
     print(solution)
 }
 
-optimalItems(items: items, maxCapacity: 7)
+knapsack(items: items, maxCapacity: 7)
+
+/// Recoursive solution
+
+func knapsack(items: [Item], currentIndex: Int, maxCapacity: Int) -> Int {
+    
+    if currentIndex < 0 || maxCapacity == 0 {
+        return 0
+    }
+    let currentItem = items[currentIndex]
+    if currentItem.weight > maxCapacity {
+        return knapsack(items: items, currentIndex: currentIndex-1, maxCapacity: maxCapacity)
+    } else {
+        return max(knapsack(items: items, currentIndex: currentIndex-1, maxCapacity: maxCapacity),
+                   knapsack(items: items, currentIndex: currentIndex-1, maxCapacity: maxCapacity - currentItem.weight) + currentItem.value)
+    }
+}
+
+let price = knapsack(items: items, currentIndex: items.count-1, maxCapacity: 6)
+print(price)
