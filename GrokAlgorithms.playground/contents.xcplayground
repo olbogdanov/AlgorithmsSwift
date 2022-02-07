@@ -12,5 +12,6 @@
         <page name='Fibonacci'/>
         <page name='FizzBuzz'/>
         <page name='Knapsack'/>
+        <page name='LongestCommonSubstring'/>
     </pages>
 </playground>
