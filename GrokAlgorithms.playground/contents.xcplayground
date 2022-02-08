@@ -13,5 +13,6 @@
         <page name='FizzBuzz'/>
         <page name='Knapsack'/>
         <page name='LongestCommonSubstring'/>
+        <page name='LongestCommonSubsequence'/>
     </pages>
 </playground>
