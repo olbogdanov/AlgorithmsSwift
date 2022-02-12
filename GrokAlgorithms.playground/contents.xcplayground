@@ -14,5 +14,6 @@
         <page name='Knapsack'/>
         <page name='LongestCommonSubstring'/>
         <page name='LongestCommonSubsequence'/>
+        <page name='MergeSort'/>
     </pages>
 </playground>
