@@ -4,5 +4,6 @@
         <page name='ReversedString'/>
         <page name='Palindrome'/>
         <page name='ReversedInt'/>
+        <page name='MaxChars'/>
     </pages>
 </playground>
