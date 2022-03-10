@@ -26,3 +26,23 @@ assert(checkSubarraySum(nums1, 6) == true)
 assert(checkSubarraySum(nums2, 6) == true)
 assert(checkSubarraySum(nums3, 6) == false)
 assert(checkSubarraySum(nums4, 6) == true)
+
+
+
+func checkSubarraySum2(_ nums: [Int], _ k: Int) -> Bool {
+    var prev = 0
+    var sum = 0
+    var set: Set<Int> = []
+    for num in nums {
+        sum = sum + num
+        let mod = sum % k
+        if set.contains(mod) {
+            return true
+        }
+        set.insert(prev)
+        prev = mod
+    }
+    return false
+}
+
+print(checkSubarraySum(nums0, 6))
