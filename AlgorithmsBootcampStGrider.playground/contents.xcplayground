@@ -5,5 +5,7 @@
         <page name='Palindrome'/>
         <page name='ReversedInt'/>
         <page name='MaxChars'/>
+        <page name='ChunkProblem'/>
+        <page name='Anagrams'/>
     </pages>
 </playground>
