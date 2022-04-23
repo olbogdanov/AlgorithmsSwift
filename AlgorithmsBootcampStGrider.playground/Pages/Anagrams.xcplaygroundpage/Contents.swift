@@ -33,6 +33,24 @@ assert(anagrams("aba   ", "baa!") == true)
 assert(anagrams("ab", "baa") == false)
 assert(anagrams("baa", "ab") == false)
 
+func anagrams2(_ stringA: String, _ stringB: String) -> Bool {
+
+    let filteredA = stringA.lowercased().filter { c in
+        c.isLetter
+    }
+    let filteredB = stringB.lowercased().filter { c in
+        c.isLetter
+    }
+    let sortedA = filteredA.sorted()
+    let sortedB = filteredB.sorted()
+    return sortedA == sortedB
+}
+
+print(anagrams2("näa   ba.. !", "ba -aä ,  n"))
+assert(anagrams2("aba   ", "baa!") == true)
+assert(anagrams2("ab", "baa") == false)
+assert(anagrams2("baa", "ab") == false)
+
 //kotlin
 //val re = Regex("[^A-Za-z0-9 ]")
 //answer = re.replace(str, "")
