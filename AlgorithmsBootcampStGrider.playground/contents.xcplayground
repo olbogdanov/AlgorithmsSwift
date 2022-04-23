@@ -7,5 +7,6 @@
         <page name='MaxChars'/>
         <page name='ChunkProblem'/>
         <page name='Anagrams'/>
+        <page name='Capitalize'/>
     </pages>
 </playground>
