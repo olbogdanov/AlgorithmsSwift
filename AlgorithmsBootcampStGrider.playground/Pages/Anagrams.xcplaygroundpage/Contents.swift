@@ -2,8 +2,14 @@ import Foundation
 
 //anagrams ingored case, ignored non alpahanumeric chars
 func anagrams(_ stringA: String, _ stringB: String) -> Bool {
-    let strA = stringA.replacingOccurrences(of: "[^\\w]", with: "", options: [.regularExpression])
-    let strB = stringB.replacingOccurrences(of: "[^A-Za-z0-9]", with: "", options: [.regularExpression]).lowercased()
+    let strA = stringA.filter { c in
+        c.isLetter
+    }
+    let strB = stringB.filter { c in
+        c.isLetter
+    }
+//    let strA = stringA.replacingOccurrences(of: "[^\\w]", with: "", options: [.regularExpression]).lowercased()
+//    let strB = stringB.replacingOccurrences(of: "[^\\w]", with: "", options: [.regularExpression]).lowercased()
 
     if strA.count != strB.count {
         return false
@@ -19,15 +25,10 @@ func anagrams(_ stringA: String, _ stringB: String) -> Bool {
         mapB[char] = count == nil ? 1 : count! + 1
     }
 
-    for (key, value) in mapA {
-        if mapB[key] != value {
-            return false
-        }
-    }
-    return true
+    return mapA == mapB
 }
 
-print(anagrams("na   ba.. !", "ba -a ,  n"))
+print(anagrams("näa   ba.. !", "ba -aä ,  n"))
 assert(anagrams("aba   ", "baa!") == true)
 assert(anagrams("ab", "baa") == false)
 assert(anagrams("baa", "ab") == false)
