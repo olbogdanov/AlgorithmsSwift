@@ -8,5 +8,6 @@
         <page name='ChunkProblem'/>
         <page name='Anagrams'/>
         <page name='Capitalize'/>
+        <page name='Steps'/>
     </pages>
 </playground>
