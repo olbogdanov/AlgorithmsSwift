@@ -10,5 +10,6 @@
         <page name='Capitalize'/>
         <page name='Steps'/>
         <page name='Pyramide'/>
+        <page name='Vowels'/>
     </pages>
 </playground>
