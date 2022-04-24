@@ -18,3 +18,22 @@ func steps(_ n: Int) {
 }
 
 steps(5)
+
+func steps2(_ n: Int) {
+    func recursive(_ step: Int) {
+        if step < 0 {
+            return
+        }
+        let stair = n - step
+        print(
+            Array.init(repeating: "#", count: stair).joined(separator: "") +
+            Array.init(repeating: " ", count: step).joined(separator: "")
+        )
+
+        recursive(step-1)
+    }
+    recursive(n-1)
+}
+
+steps2(5)
+
