@@ -9,5 +9,6 @@
         <page name='Anagrams'/>
         <page name='Capitalize'/>
         <page name='Steps'/>
+        <page name='Pyramide'/>
     </pages>
 </playground>
