@@ -11,5 +11,6 @@
         <page name='Steps'/>
         <page name='Pyramide'/>
         <page name='Vowels'/>
+        <page name='MatrixSpirals'/>
     </pages>
 </playground>
