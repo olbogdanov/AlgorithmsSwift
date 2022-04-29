@@ -12,5 +12,6 @@
         <page name='Pyramide'/>
         <page name='Vowels'/>
         <page name='MatrixSpirals'/>
+        <page name='Fibonacci'/>
     </pages>
 </playground>
