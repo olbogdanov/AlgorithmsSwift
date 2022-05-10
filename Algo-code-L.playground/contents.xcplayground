@@ -3,5 +3,6 @@
     <pages>
         <page name='Continuous Subarray Sum 523'/>
         <page name='Arranging Coins 441'/>
+        <page name='Maximum Width of Binary Tree 662'/>
     </pages>
 </playground>
